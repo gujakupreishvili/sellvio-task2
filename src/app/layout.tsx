@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Manrope } from "next/font/google";
 import "./globals.css";
+// import LocalFont from "next/font/local";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +12,28 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const manropeFont = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
+});
+// ორივე პროექტში ვცადე რომ ლოკალურად დამეყენებინა ფონტი helvetic მაგრამ ფონტების ფოლდერში ვერაფერს ხედავდა სტუდიო
+//  და აქ გუგლის ფონტიდან შემოვაიმპორტე მზგავსი ფონტი  გაითვალისწინეთ ეს ნაწილი შეგიძლიათ თქვენც ცადოთ და მითხრათ რა მეშლებოდა :))) 
+// const helvetic = LocalFont({
+//   src: [
+//     {
+//       path: '/font/HelveticaNeueMedium.otf',
+//       weight: "400",
+//       style: "normal",
+//     },
+//     {
+//       path: "/font/HelveticaNeueBold.otf",
+//       weight: "700",
+//       style: "normal",
+//     },
+//   ],
+//   variable: "--font-helvetic",
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${manropeFont.variable} antialiased`}
       >
         {children}
       </body>
