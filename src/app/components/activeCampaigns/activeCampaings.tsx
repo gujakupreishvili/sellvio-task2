@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import React from 'react'
 import verify from "../../../../public/assets/contentImgs/verified-check-svgrepo-com 1.svg"
 import start from "../../../../public/assets/contentImgs/star-svgrepo-com 1.svg"
@@ -23,7 +23,7 @@ export default function ActiveCampaings({compaName ,rate ,text,pricePer1k,curren
    const remainingBudget = Math.max(totalBudget - usedBudget, 0);
    const progress = Math.min((currentOrders / totalOrders) * 100, 100);
   return (
-    <div className='flex flex-col border-[2px] border-[#3012B3CC] rounded-[8px] py-[23px] px-[25px]  w-[32%] h-[416px]'>
+    <div className='flex flex-col border-[2px] border-[#3012B3CC] rounded-[8px] py-[23px] px-[25px]  xl:w-[32%] w-[48%] h-[466px] max-w-[500px]'>
       <div className='flex justify-between '>
         <div className='flex items-center gap-[8px]'>
         <div className='border-[#0000007A] border-[0.5px] bg-[#D9D9D9] rounded-[8px] w-[28px] h-[28px]'></div>
@@ -75,6 +75,7 @@ export default function ActiveCampaings({compaName ,rate ,text,pricePer1k,curren
         <Image  src={calendar} alt='calendar'/>
         <p className='text-dark/83 text-[12px] font-bold font-manrope'>ბოლო ვადა: სექტემბერი 5, 2025</p>
       </div>
+      <Button text='გაწევრიანება' className='bg-[linear-gradient(90deg,#3012B3_0%,#7B62E8_100%)] mt-[17px] rounded-[8px] border-[0.5px] h-[40px] border-[#F1E7FF] text-[12px] text-white font-manrope font-medium ' />
     </div>
   )
 }
