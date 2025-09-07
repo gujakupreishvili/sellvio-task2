@@ -18,7 +18,7 @@ import company from "../../../../public/assets/headerImgs/company_svgrepo.com.sv
 export default function Header() {
   return (
     <>
-    <div className="flex flex-col mt-[12px] h-[710px] rounded-[60px] relative w-full max-w-[1980px] mx-auto px-[10px]">
+    <div className="flex flex-col mt-[12px] h-[710px] rounded-[60px] relative overflow-hidden w-full max-w-[1980px] mx-auto px-[10px]">
     <div
       className=" px-[80px]  pr-[58.25] rounded-[60px]  h-[710px]  "
       style={{
