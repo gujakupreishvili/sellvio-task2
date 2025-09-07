@@ -5,5 +5,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-manrope: var(--font-manrope);
+  --breakpoint-mid: 1281px;
+  --breakpoint-midNext: 1434px;
 }
 
